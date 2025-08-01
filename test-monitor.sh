@@ -1,10 +1,10 @@
  #!/bin/bash
 
-PROCESS_NAME="test"
-API_URL="https://test.com/monitoring/test/api"
-STATE_FILE="/var/run/test_monitor.state"
-LOG_FILE="/var/log/monitoring.log" # предполагается, что файл уже есть с правами 644
-SLEEP_INTERVAL=60
+PROCESS_NAME="test" # имя процесса, за которым будем смотреть
+API_URL="https://test.com/monitoring/test/api" # адрес сервера мониторинга
+STATE_FILE="/var/run/test_monitor.state" # файл состояния
+LOG_FILE="/var/log/monitoring.log" # файл лога
+SLEEP_INTERVAL=60 # # частота опроса (раз в 60 секунд)
 
 while true; do
     current_pid=$(pgrep -x "$PROCESS_NAME")
